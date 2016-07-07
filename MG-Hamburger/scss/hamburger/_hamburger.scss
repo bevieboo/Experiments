@@ -21,27 +21,25 @@
     background: black;
     display: block;
     margin: 5px auto;
-    border-radius: 6px;
+    border-radius: 5px;
 }
 
 .is-open {
-    .line1 {
-        animation-name: jiggleLeft;
+    .line{
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
+    }
+    .line1 {
+        animation-name: jiggleLeft;
+        animation-delay: 0.45s;
+    }
+    .line2 {
+        animation-name: jiggleRight;
+        animation-delay: 0.30s;
     }
     .line3 {
         animation-name: jiggleLeft;
-        animation-duration: 0.5s;
-        animation-fill-mode: forwards;
-    }
-}
-
-.is-open {
-    .line2 {
-        animation-name: jiggleRight;
-        animation-duration: 0.5s;
-        animation-fill-mode: forwards;
+        animation-delay: 0.15s;
     }
 }
 

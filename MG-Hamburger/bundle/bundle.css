@@ -19,31 +19,31 @@
   background: black;
   display: block;
   margin: 5px auto;
-  border-radius: 6px; }
+  border-radius: 5px; }
+
+.is-open .line {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
 
 .is-open .line1 {
   -webkit-animation-name: jiggleLeft;
           animation-name: jiggleLeft;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards; }
-
-.is-open .line3 {
-  -webkit-animation-name: jiggleLeft;
-          animation-name: jiggleLeft;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards; }
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s; }
 
 .is-open .line2 {
   -webkit-animation-name: jiggleRight;
           animation-name: jiggleRight;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards; }
+  -webkit-animation-delay: 0.30s;
+          animation-delay: 0.30s; }
+
+.is-open .line3 {
+  -webkit-animation-name: jiggleLeft;
+          animation-name: jiggleLeft;
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s; }
 
 @-webkit-keyframes jiggleLeft {
   50% {

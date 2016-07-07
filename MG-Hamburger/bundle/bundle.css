@@ -1,0 +1,78 @@
+.navigation-hamburger {
+  width: 50px;
+  height: 50px;
+  border: 1px solid grey;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  border-radius: 50%;
+  cursor: pointer; }
+
+.line-wrap {
+  margin: 10px 0 0 12px;
+  overflow: hidden;
+  width: 50%; }
+
+.line {
+  height: 3px;
+  background: black;
+  display: block;
+  margin: 5px auto;
+  border-radius: 6px; }
+
+.is-open .line1 {
+  -webkit-animation-name: jiggleLeft;
+          animation-name: jiggleLeft;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+.is-open .line3 {
+  -webkit-animation-name: jiggleLeft;
+          animation-name: jiggleLeft;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+.is-open .line2 {
+  -webkit-animation-name: jiggleRight;
+          animation-name: jiggleRight;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+@-webkit-keyframes jiggleLeft {
+  50% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); }
+  100% {
+    -webkit-transform: translateX(-25px);
+            transform: translateX(-25px); } }
+
+@keyframes jiggleLeft {
+  50% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); }
+  100% {
+    -webkit-transform: translateX(-25px);
+            transform: translateX(-25px); } }
+
+@-webkit-keyframes jiggleRight {
+  50% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px); }
+  100% {
+    -webkit-transform: translateX(25px);
+            transform: translateX(25px); } }
+
+@keyframes jiggleRight {
+  50% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px); }
+  100% {
+    -webkit-transform: translateX(25px);
+            transform: translateX(25px); } }

@@ -57,10 +57,10 @@
 
 .cross-wrap {
     position: absolute;
-    top: -12px;
+    top: 0;
     margin: 10px 0 0 13px;
-    width: 50%;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     transform: rotate(45deg);
     overflow: hidden;
     .cross-line {
@@ -68,13 +68,14 @@
         width: 100%;
         background: black;
         position: absolute;
+        border-radius: 5px;
     }
     .cross-line1 {
-        top: 50%;
+        top: 12px;
         transform: translateX(-40px);
     }
     .cross-line2 {
-        top: 50%;
+        top: 12px;
         transform: rotate(90deg) translateX(-40px);
     }
 }

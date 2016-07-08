@@ -62,10 +62,10 @@
 
 .cross-wrap {
   position: absolute;
-  top: -12px;
+  top: 0;
   margin: 10px 0 0 13px;
-  width: 50%;
-  height: 50px;
+  width: 25px;
+  height: 25px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   overflow: hidden; }
@@ -73,13 +73,14 @@
     height: 3px;
     width: 100%;
     background: black;
-    position: absolute; }
+    position: absolute;
+    border-radius: 5px; }
   .cross-wrap .cross-line1 {
-    top: 50%;
+    top: 12px;
     -webkit-transform: translateX(-40px);
             transform: translateX(-40px); }
   .cross-wrap .cross-line2 {
-    top: 50%;
+    top: 12px;
     -webkit-transform: rotate(90deg) translateX(-40px);
             transform: rotate(90deg) translateX(-40px); }
 

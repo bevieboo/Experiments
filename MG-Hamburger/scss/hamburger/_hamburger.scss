@@ -47,11 +47,11 @@
     }
     .cross-line1 {
         animation-name: crossLeft;
-        animation-delay: 0.60s;
+        animation-delay: 0.65s;
     }
     .cross-line2 {
         animation-name: crossRight;
-        animation-delay: 0.75s;
+        animation-delay: 0.8s;
     }
 }
 
@@ -62,10 +62,11 @@
     width: 50%;
     height: 50px;
     transform: rotate(45deg);
+    overflow: hidden;
     .cross-line {
         height: 3px;
         width: 100%;
-        background: red;
+        background: black;
         position: absolute;
     }
     .cross-line1 {

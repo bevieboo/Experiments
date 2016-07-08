@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box; }
+
 .navigation-hamburger {
   width: 50px;
   height: 50px;
@@ -21,7 +24,7 @@
   margin: 5px auto;
   border-radius: 5px; }
 
-.is-open .line {
+.is-open .line, .is-open .cross-line {
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
@@ -45,19 +48,39 @@
   -webkit-animation-delay: 0.15s;
           animation-delay: 0.15s; }
 
+.is-open .cross-line1 {
+  -webkit-animation-name: crossLeft;
+          animation-name: crossLeft;
+  -webkit-animation-delay: 0.60s;
+          animation-delay: 0.60s; }
+
+.is-open .cross-line2 {
+  -webkit-animation-name: crossRight;
+          animation-name: crossRight;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s; }
+
 .cross-wrap {
-  top: -32px;
+  position: absolute;
+  top: -12px;
+  margin: 10px 0 0 13px;
   width: 50%;
-  overflow: hidden; }
+  height: 50px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }
   .cross-wrap .cross-line {
     height: 3px;
     width: 100%;
     background: red;
     position: absolute; }
   .cross-wrap .cross-line1 {
-    top: 50%; }
+    top: 50%;
+    -webkit-transform: translateX(-40px);
+            transform: translateX(-40px); }
   .cross-wrap .cross-line2 {
-    top: 70%; }
+    top: 50%;
+    -webkit-transform: rotate(90deg) translateX(-40px);
+            transform: rotate(90deg) translateX(-40px); }
 
 @-webkit-keyframes jiggleLeft {
   50% {
@@ -90,3 +113,23 @@
   100% {
     -webkit-transform: translateX(25px);
             transform: translateX(25px); } }
+
+@-webkit-keyframes crossLeft {
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
+@keyframes crossLeft {
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
+@-webkit-keyframes crossRight {
+  100% {
+    -webkit-transform: rotate(90deg) translateX(0);
+            transform: rotate(90deg) translateX(0); } }
+
+@keyframes crossRight {
+  100% {
+    -webkit-transform: rotate(90deg) translateX(0);
+            transform: rotate(90deg) translateX(0); } }

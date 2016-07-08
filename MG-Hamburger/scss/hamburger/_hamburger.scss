@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .navigation-hamburger {
     width: 50px;
     height: 50px;
@@ -25,7 +29,7 @@
 }
 
 .is-open {
-    .line{
+    .line, .cross-line {
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
     }
@@ -41,15 +45,23 @@
         animation-name: jiggleLeft;
         animation-delay: 0.15s;
     }
+    .cross-line1 {
+        animation-name: crossLeft;
+        animation-delay: 0.60s;
+    }
+    .cross-line2 {
+        animation-name: crossRight;
+        animation-delay: 0.75s;
+    }
 }
 
 .cross-wrap {
-    // position: relative;
-    top: -32px;
-    // margin: 10px 0 0 13px;
+    position: absolute;
+    top: -12px;
+    margin: 10px 0 0 13px;
     width: 50%;
-    overflow: hidden;
-    // transform: rotate(45deg);
+    height: 50px;
+    transform: rotate(45deg);
     .cross-line {
         height: 3px;
         width: 100%;
@@ -58,10 +70,11 @@
     }
     .cross-line1 {
         top: 50%;
+        transform: translateX(-40px);
     }
     .cross-line2 {
-        top: 70%;
-        // transform: rotate(90deg);
+        top: 50%;
+        transform: rotate(90deg) translateX(-40px);
     }
 }
 
@@ -82,5 +95,17 @@
     }
     100% {
         transform: translateX(25px);
+    }
+}
+
+@keyframes crossLeft {
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes crossRight {
+    100% {
+        transform: rotate(90deg) translateX(0);
     }
 }

@@ -11,9 +11,9 @@
 }
 
 .line-wrap {
-    margin: 10px 0 0 12px;
+    margin: 10px 0 0 13px;
     overflow: hidden;
-    width: 50%;
+    width: 45%;
 }
 
  .line {
@@ -42,6 +42,30 @@
         animation-delay: 0.15s;
     }
 }
+
+.cross-wrap {
+    // position: relative;
+    top: -32px;
+    // margin: 10px 0 0 13px;
+    width: 50%;
+    overflow: hidden;
+    // transform: rotate(45deg);
+    .cross-line {
+        height: 3px;
+        width: 100%;
+        background: red;
+        position: absolute;
+    }
+    .cross-line1 {
+        top: 50%;
+    }
+    .cross-line2 {
+        top: 70%;
+        // transform: rotate(90deg);
+    }
+}
+
+
 
 @keyframes jiggleLeft {
     50% {

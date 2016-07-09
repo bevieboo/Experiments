@@ -6,6 +6,7 @@
     width: 50px;
     height: 50px;
     border: 1px solid grey;
+    opacity: 0.6;
     position: absolute;
     top: 0;
     right: 0;
@@ -15,17 +16,43 @@
 }
 
 .line-wrap {
-    margin: 10px 0 0 13px;
+    margin: 14px 0 0 14px;
     overflow: hidden;
-    width: 45%;
+    width: 39%;
 }
 
- .line {
-    height: 3px;
+.line {
+    height: 2px;
     background: black;
     display: block;
-    margin: 5px auto;
+    margin: 3px auto;
     border-radius: 5px;
+}
+
+.cross-wrap {
+    position: absolute;
+    top: 6px;
+    left: 3px;
+    margin: 10px 0 0 13px;
+    width: 16px;
+    height: 17px;
+    transform: rotate(45deg);
+    overflow: hidden;
+    .cross-line {
+        height: 2px;
+        width: 100%;
+        background: black;
+        position: absolute;
+        border-radius: 5px;
+    }
+    .cross-line1 {
+        top: 7px;
+        transform: translateX(-30px);
+    }
+    .cross-line2 {
+        top: 7px;
+        transform: rotate(90deg) translateX(-30px);
+    }
 }
 
 .is-open {
@@ -55,28 +82,35 @@
     }
 }
 
-.cross-wrap {
-    position: absolute;
-    top: 0;
-    margin: 10px 0 0 13px;
-    width: 25px;
-    height: 25px;
-    transform: rotate(45deg);
-    overflow: hidden;
-    .cross-line {
-        height: 3px;
-        width: 100%;
-        background: black;
-        position: absolute;
-        border-radius: 5px;
+.is-hidden {
+    .line, .cross-line {
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+    .line1 {
+        transform: translateX(-25px);
+        animation-name: jiggleClose;
+        animation-delay: 0.60s;
+    }
+    .line2 {
+        transform: translateX(25px);
+        animation-name: jiggleClose;
+        animation-delay: 0.75s;
+    }
+    .line3 {
+        transform: translateX(-25px);
+        animation-name: jiggleClose;
+        animation-delay: 0.90s;
     }
     .cross-line1 {
-        top: 12px;
-        transform: translateX(-40px);
+        transform: translateX(0px);
+        animation-name: crossLeftClose;
+        animation-delay: 0.15s;
     }
     .cross-line2 {
-        top: 12px;
-        transform: rotate(90deg) translateX(-40px);
+        transform: rotate(90deg) translateX(0px);
+        animation-name: crossRightClose;
+        animation-delay: 0.30s;
     }
 }
 
@@ -90,7 +124,6 @@
         transform: translateX(-25px);
     }
 }
-
 @keyframes jiggleRight {
     50% {
         transform: translateX(-10px);
@@ -99,15 +132,35 @@
         transform: translateX(25px);
     }
 }
+@keyframes jiggleClose {
+    0%{
+        transform: translateX(-25px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
 
 @keyframes crossLeft {
     100% {
         transform: translateX(0);
     }
 }
-
+@keyframes crossLeftClose {
+    100% {
+        transform: translateX(30px);
+    }
+}
 @keyframes crossRight {
     100% {
         transform: rotate(90deg) translateX(0);
+    }
+}
+@keyframes crossRightClose {
+    100% {
+        transform: rotate(90deg) translateX(30px);
     }
 }
